@@ -1,0 +1,74 @@
+### Test Database Connection
+GET http://localhost:5000/test-db
+
+### Register a new patient
+POST http://localhost:5000/api/patients/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirmPassword": "password123",
+  "contactNumber": "1234567890",
+  "age": 30,
+  "gender": "Male",
+  "address": "123 Main St, City, Country"
+}
+
+### Login as a patient
+POST http://localhost:5000/api/patients/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+
+### Get patient profile (replace TOKEN with the token received from login)
+GET http://localhost:5000/api/patients/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwN2E2ODg1OTIwYjk2MDNhYjZiMTc2IiwidHlwZSI6InBhdGllbnQifSwiaWF0IjoxNzI4NTU0NzE5LCJleHAiOjE3Mjg1NTgzMTl9.ZTwvIuGnx_sW5vHr8jcirFOoOOdq7GyWYey6VKi44-I
+
+### Register a new doctor
+POST http://localhost:5000/api/doctors/register
+Content-Type: application/json
+
+{
+  "name": "Dr. Jane Smith",
+  "email": "jane@example.com",
+  "password": "password123",
+  "confirmPassword": "password123",
+  "contactNumber": "9876543210",
+  "age": 35,
+  "gender": "Female",
+  "specialization": "Cardiology",
+  "hospitalName": "City Hospital"
+}
+
+### Login as a doctor
+POST http://localhost:5000/api/doctors/login
+Content-Type: application/json
+
+{
+  "email": "jane@example.com",
+  "password": "password123"
+}
+
+### Get doctor profile (replace TOKEN with the token received from login)
+GET http://localhost:5000/api/doctors/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwN2E3NjY1OTIwYjk2MDNhYjZiMTc3IiwidHlwZSI6ImRvY3RvciJ9LCJpYXQiOjE3Mjg1NTQ4NTksImV4cCI6MTcyODU1ODQ1OX0.wwgKP9V-PrZCf2UEGgaOjfhPHusPeUoxhxYPjIXeH7Q
+
+### Create an appointment (replace PATIENT_TOKEN with a valid patient token)
+POST http://localhost:5000/api/appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwN2E2ODg1OTIwYjk2MDNhYjZiMTc2IiwidHlwZSI6InBhdGllbnQifSwiaWF0IjoxNzI4NTU0NzE5LCJleHAiOjE3Mjg1NTgzMTl9.ZTwvIuGnx_sW5vHr8jcirFOoOOdq7GyWYey6VKi44-I
+Content-Type: application/json
+
+{
+  "doctorId": "6707a7665920b9603ab6b177",
+  "date": "2023-06-01",
+  "time": "10:00 AM"
+}
+
+### Get appointments (replace TOKEN with either a patient or doctor token)
+GET http://localhost:5000/api/appointments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwN2E2ODg1OTIwYjk2MDNhYjZiMTc2IiwidHlwZSI6InBhdGllbnQifSwiaWF0IjoxNzI4NTU0NzE5LCJleHAiOjE3Mjg1NTgzMTl9.ZTwvIuGnx_sW5vHr8jcirFOoOOdq7GyWYey6VKi44-I
