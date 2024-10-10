@@ -1,0 +1,40 @@
+.appointments {
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .appointment-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .appointment-card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  
+  .appointment-card p {
+    margin: 10px 0;
+    color: #666;
+  }
+  
+  .appointment-card .date-time {
+    font-weight: bold;
+    color: #0066ff;
+  }

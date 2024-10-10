@@ -1,0 +1,90 @@
+/* DoctorAbout.css */
+.doctor-about-container {
+    padding: 1rem;
+  }
+  
+  .heading {
+    font-size: 20px;
+    line-height: 30px;
+    color: #333; /* Heading color */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .heading span {
+    font-weight: bold;
+    color: #0066ff; /* Iris blue color */
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .paragraph {
+    color: #666; /* Text color */
+  }
+  
+  .education-section {
+    margin-top: 3rem;
+  }
+  
+  .education-heading {
+    font-size: 20px;
+    line-height: 30px;
+    color: #333; /* Heading color */
+    font-weight: 600;
+  }
+  
+  .education-list {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    list-style-type: none; /* Remove default list styling */
+  }
+  
+  .education-item {
+    margin-bottom: 1.875rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .date {
+    color: #0066ff; /* Iris blue color */
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
+  .degree {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #666; /* Text color */
+  }
+  
+  .experience-section {
+    margin-top: 3rem;
+  }
+  
+  .experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .experience-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff9ea; /* Light background color */
+  }
+  
+  .experience-item .role {
+    color: #f6c700; /* Yellow color */
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
